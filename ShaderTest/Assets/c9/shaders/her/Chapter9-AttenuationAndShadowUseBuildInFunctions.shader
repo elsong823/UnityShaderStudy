@@ -6,10 +6,45 @@
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
-		
+		Pass
+		{
+			Tags
+			{
+				"LightMode" = "ShadowCaster"
+			}
+			CGPROGRAM
+			#pragma vertex Vert
+			#pragma fragment Frag
+			#pragma multi_compile_shadowcaster
+
+			#include "UnityCG.cginc"
+
+			struct v2f
+			{
+				V2F_SHADOW_CASTER;
+			};
+
+			v2f Vert(appdata_base v)
+			{
+				v2f o;
+				TRANSFER_SHADOW_CASTER_NORMALOFFSET(o);
+				return o;
+			}
+
+			fixed4 Frag(v2f i) : SV_Target
+			{
+				SHADOW_CASTER_FRAGMENT(i);
+			}
+
+			ENDCG
+		}
+
 		Pass {
 			// Pass for ambient light & first pixel light (directional light)
-			Tags { "LightMode"="ForwardBase" }
+			Tags
+			{ 
+				"LightMode"="ForwardBase" 
+			}
 		
 			CGPROGRAM
 			
@@ -27,7 +62,8 @@
 			fixed4 _Specular;
 			float _Gloss;
 			
-			struct a2v {
+			struct a2v
+			 {
 				float4 vertex : POSITION;
 				float3 normal : NORMAL;
 			};
@@ -78,7 +114,7 @@
 			// Pass for other pixel lights
 			Tags { "LightMode"="ForwardAdd" }
 			
-			Blend One One
+			Blend SrcAlpha One
 		
 			CGPROGRAM
 			
@@ -142,5 +178,5 @@
 			ENDCG
 		}
 	}
-	FallBack "Specular"
+//	FallBack "VertexLit"
 }
