@@ -1,19 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\c9\shaders\shadowShader.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\c9\shaders\finalShaders\floorShader.shader">
     <Files>
-      <File FileName="Assets\c9\shaders\her\Chapter9-ForwardRendering.shader" Line="26" Column="17" />
-      <File FileName="Assets\c8\shaders\alphaBlendShader.shader" Line="1" Column="1" />
-      <File FileName="Assets\c8\shaders\her\Chapter8-AlphaBlendZWrite.shader" Line="1" Column="1" />
-      <File FileName="Assets\c9\shaders\shadowShader.shader" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/c9/shaders/forwardRenderingShader.shader">
-    <Files>
-      <File FileName="../../../../Applications/Unity/Unity.app/Contents/CGIncludes/UnityCG.cginc" Line="131" Column="38" />
-      <File FileName="Assets/c9/shaders/forwardRenderingShader.shader" Line="145" Column="43" />
-      <File FileName="Assets/c9/shaders/her/Chapter9-ForwardRendering.shader" Line="56" Column="3" />
->>>>>>> 2a630e26550f2231ed3b1e72bd66bea63a0f71c2
+      <File FileName="Assets\c9\shaders\finalShaders\floorShader.shader" Line="179" Column="70" />
+      <File FileName="Assets\c9\shaders\finalShaders\opaqueCubeShader.shader" Line="42" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
