@@ -1,10 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\c9\shaders\finalShaders\floorShader.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/c9/shaders/finalShaders/transparentCubeShader.shader">
     <Files>
-      <File FileName="Assets\c9\shaders\finalShaders\floorShader.shader" Line="179" Column="70" />
-      <File FileName="Assets\c9\shaders\finalShaders\opaqueCubeShader.shader" Line="42" Column="31" />
+      <File FileName="Assets/c9/shaders/finalShaders/floorShader.shader" Line="129" Column="28" />
+      <File FileName="Assets/c9/shaders/her/Chapter9-AttenuationAndShadowUseBuildInFunctions.shader" Line="87" Column="21" />
+      <File FileName="Assets/c9/shaders/finalShaders/opaqueCubeShader.shader" Line="158" Column="43" />
+      <File FileName="Assets/c9/shaders/finalShaders/transparentCubeShader.shader" Line="234" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ShaderTest" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

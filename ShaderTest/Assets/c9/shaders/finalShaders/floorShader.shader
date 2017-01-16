@@ -102,9 +102,9 @@
 
 				fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(worldHalf, worldNormal)), _Shininess);
 
-				fixed shadowAtten = SHADOW_ATTENUATION(i);
+				UNITY_LIGHT_ATTENUATION(atten, i, worldPos);
 
-				return fixed4(ambient + (diffuse + specular) * shadowAtten, 1.0);
+				return fixed4(ambient + (diffuse + specular) * atten, 1.0);
 			}
 
 			ENDCG
@@ -116,7 +116,11 @@
 			{
 				"LightMode" = "ForwardAdd"
 			}
-						CGPROGRAM
+			Blend SrcAlpha One
+			
+			CGPROGRAM
+
+
 			//很重要，否则没有阴影（阴影衰减）
 			#pragma multi_compile_fwdadd
 			#pragma vertex Vert
@@ -195,15 +199,15 @@
 
 				fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(worldHalf, worldNormal)), _Shininess);
 
-				fixed shadowAtten = SHADOW_ATTENUATION(i);
+				UNITY_LIGHT_ATTENUATION(atten, i, worldPos);
 
-				fixed lightAtten = 0.2;
-
-				return fixed4(ambient + (diffuse + specular) * shadowAtten, 1.0);
+				return fixed4((diffuse + specular) * atten, 1.0);
 			}
 
 			ENDCG
 		}
+
+
 	}
 
 	Fallback "VertexLit"	
